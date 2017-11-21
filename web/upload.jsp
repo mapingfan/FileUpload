@@ -7,8 +7,9 @@
     <title>文件上传</title>
 </head>
 <body>
-<form method="post" enctype="multipart/form-data" action="uploadServlet">
-    <input type="file" name="file">
+<form method="post" enctype="multipart/form-data" action="handleUploadServletV2">
+    <input type="file" name="file1">
+    <input type="file" name="file2">
     <input type="submit" value="提交">
 </form>
 </body>

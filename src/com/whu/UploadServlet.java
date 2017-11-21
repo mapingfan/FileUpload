@@ -1,6 +1,5 @@
 package com.whu;
 
-import com.sun.org.apache.bcel.internal.generic.IF_ACMPEQ;
 import org.apache.commons.fileupload.FileItem;
 import org.apache.commons.fileupload.FileUploadException;
 import org.apache.commons.fileupload.disk.DiskFileItemFactory;
@@ -40,10 +39,10 @@ public class UploadServlet extends HttpServlet {
         upload.setFileSizeMax(MAX_FILE_SIZE);
         upload.setSizeMax(MAX_REQUEST_SIZE);
         upload.setHeaderEncoding("UTF-8");
-        String uploadPath = request.getServletContext().getRealPath("./")
-                            + File.separator + UPLOAD_DIRECTORY;
-        File uploadDir = new File(uploadPath);
-        if (!uploadDir.exists()) {
+            String uploadPath = request.getServletContext().getRealPath("./")
+                    + File.separator + UPLOAD_DIRECTORY;
+            File uploadDir = new File(uploadPath);
+            if (!uploadDir.exists()) {
             uploadDir.mkdir();
         }
         try {
